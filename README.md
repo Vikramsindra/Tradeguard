@@ -285,7 +285,7 @@ TradeGuard/
 | PostgreSQL | 15+ | Primary datastore |
 | Git | Any recent | Version control |
 
-> **Note:** `requirements.txt` and `package.json` are currently empty. The dependency lists below reflect the intended stack from the design documents and must be verified against the actual files once populated.
+> **Note:** `backend/requirements.txt` is populated and verified. `frontend/package.json` remains to be initialized.
 
 ---
 
@@ -328,21 +328,20 @@ VITE_APP_MODE=SIMULATOR
 ### Backend
 
 ```bash
-# 1. Create and activate a virtual environment
+# 1. Create and activate a virtual environment (if not already created)
 cd backend
 python -m venv venv
 venv\Scripts\activate        # Windows
 # source venv/bin/activate   # macOS / Linux
 
 # 2. Install dependencies
-# ⚠️  requirements.txt is currently empty — populate before running
 pip install -r requirements.txt
 
-# 3. Copy and fill environment file
-copy .env.example .env
+# 3. Copy and fill environment file (if not done)
+# Note: The .env file is located at the project root
+copy ..\.env.example ..\.env
 
 # 4. Start the FastAPI development server
-# ⚠️  app/main.py is currently empty — implement before running
 uvicorn app.main:app --reload --port 8000
 ```
 
@@ -415,7 +414,7 @@ pytest tests/integration/
 pytest --cov=app --cov-report=term-missing
 ```
 
-> **Note:** No tests have been written yet. `tests/unit/` and `tests/integration/` contain only `__init__.py`. All test commands above will pass vacuously until test files are added.
+> **Note:** Initial health and configuration unit tests are implemented. You can run them to verify the backend foundation.
 
 Meaningful scenarios to implement (per INVARIANTS.md):
 - Expired / altered / wrong-account approval returns no admitted mutation
