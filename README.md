@@ -29,7 +29,7 @@ TradeGuard is a web-based AI trading copilot that lets a trader query their 021 
 | Feature | Status | Notes |
 |---|---|---|
 | Project scaffold (folders, config files) | ✅ Done | `backend/`, `frontend/`, `docs/` created |
-| Design documentation (PRD, ARCHITECTURE, etc.) | ✅ Done | Six documents in repo root |
+| Design documentation (PRD, ARCHITECTURE, etc.) | ✅ Done | Documents in docs/ and repo root |
 | FastAPI application skeleton | 🔲 Planned | `backend/app/main.py` is empty |
 | PostgreSQL schema / Alembic migrations | 🔲 Planned | `backend/alembic/versions/` is empty |
 | Session and authentication | 🔲 Planned | |
@@ -216,11 +216,6 @@ flowchart TD
 ```
 TradeGuard/
 ├── README.md                    ← This file
-├── PRD.md                       ← Product requirements
-├── ARCHITECTURE.md              ← Component design
-├── INVARIANTS.md                ← Mandatory safety properties
-├── DATA_MODEL.md                ← PostgreSQL entities and state machines
-├── API_CONTRACT.md              ← FastAPI routes and payloads
 ├── AGENTS.md                    ← Team working rules
 ├── .gitignore
 ├── .env.example                 ← Root-level env placeholder
@@ -267,6 +262,11 @@ TradeGuard/
 │   └── Dockerfile               ← (empty)
 │
 └── docs/
+    ├── PRD.md                   ← Product requirements
+    ├── ARCHITECTURE.md          ← Component design
+    ├── INVARIANTS.md            ← Mandatory safety properties
+    ├── DATA_MODEL.md            ← PostgreSQL entities and state machines
+    ├── API_CONTRACT.md          ← FastAPI routes and payloads
     ├── api/
     ├── architecture/
     └── guides/
@@ -464,11 +464,11 @@ Unsupported capabilities are disabled and explained to the trader; they are not 
 
 | Document | Purpose |
 |---|---|
-| [PRD.md](PRD.md) | Product requirements and trader-facing behaviour (v1.0) |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Component boundaries, trust zones, and data flow |
-| [INVARIANTS.md](INVARIANTS.md) | 39 mandatory safety properties and their enforcement |
-| [DATA_MODEL.md](DATA_MODEL.md) | PostgreSQL entities, state machines, and transaction boundaries |
-| [API_CONTRACT.md](API_CONTRACT.md) | FastAPI routes, payloads, error codes, and event types |
+| [PRD.md](docs/PRD.md) | Product requirements and trader-facing behaviour (v1.0) |
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Component boundaries, trust zones, and data flow |
+| [INVARIANTS.md](docs/INVARIANTS.md) | 39 mandatory safety properties and their enforcement |
+| [DATA_MODEL.md](docs/DATA_MODEL.md) | PostgreSQL entities, state machines, and transaction boundaries |
+| [API_CONTRACT.md](docs/API_CONTRACT.md) | FastAPI routes, payloads, error codes, and event types |
 | [AGENTS.md](AGENTS.md) | Team working rules, ownership map, and nonnegotiable constraints |
 
 If any two documents disagree, preserve the more restrictive safety behaviour and document the conflict.

@@ -4,7 +4,7 @@
 
 This file guides human developers and coding assistants working on TradeGuard, the PS-04 AI Trading Copilot prototype. The accompanying documents describe intended behaviour, not completed implementation. No codebase or organizer-provided 021 contract has been verified for this pack.
 
-Read [PRD.md](PRD.md), [ARCHITECTURE.md](ARCHITECTURE.md) and [INVARIANTS.md](INVARIANTS.md) before changing trading behaviour. Use [DATA_MODEL.md](DATA_MODEL.md) and [API_CONTRACT.md](API_CONTRACT.md) for shared types and boundaries.
+Read [PRD.md](docs/PRD.md), [ARCHITECTURE.md](docs/ARCHITECTURE.md) and [INVARIANTS.md](docs/INVARIANTS.md) before changing trading behaviour. Use [DATA_MODEL.md](docs/DATA_MODEL.md) and [API_CONTRACT.md](docs/API_CONTRACT.md) for shared types and boundaries.
 
 ## Document authority
 
